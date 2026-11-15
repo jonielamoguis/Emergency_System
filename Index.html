@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emergency Assistance</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<h1>Loud SOS Prototype</h1>
+<p class="hint" style="margin-bottom:4px"><b>Group: Tempura</b></p>
+<p class="hint">Press the <b>side button</b> (right edge of the phone) <b>3 times quickly</b> to send a loud alert.</p>
+<div class="wrap" id="wrap">
+<button class="side" id="side" aria-label="Side button"></button>
+<div class="phone"><div class="screen" id="screen"></div></div>
+</div>
+<button class="reset" id="reset">Reset prototype</button>
+<div class="panel"><h3>Settings (for testers)</h3>
+<input id="cName" placeholder="Your name (optional)">
+<input id="cPhone" type="tel" placeholder="Emergency contact number">
+<input id="cPin" inputmode="numeric" maxlength="4" placeholder="Cancel PIN (4 digits)">
+<div class="row"><button id="saveCfg">Save</button><button id="askLoc">Enable location</button></div>
+<div id="cfgMsg" style="margin-top:6px;color:var(--mut)"></div>
+<h3 style="margin-top:10px">Event log</h3><ul id="log"></ul><button id="clearLog">Clear log</button></div>
+<div class="legend"><b>Real:</b> GPS location (if allowed), emergency message with a Maps link, saved contact and PIN, event log, vibration.<br><b>Simulated:</b> responder confirmation, and silent sending: a browser can only open your SMS app, so you tap Send.</div>
+<script src="script.js"></script></body></html>
